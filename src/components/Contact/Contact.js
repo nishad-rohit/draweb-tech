@@ -31,8 +31,8 @@ const Contact = () => {
       </div>
 
       {/* Contact Form */}
-      <div className="contact-form-container">
-        <h2>Send Us a Message</h2>
+        <div className="contact-form-container">
+        <h2>Request a Consultation</h2>
         <form className="contact-form">
           <div className="form-row">
             <input type="text" placeholder="Full Name" required />

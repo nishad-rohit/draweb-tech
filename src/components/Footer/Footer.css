@@ -51,7 +51,13 @@
 }
 
 .footer-links a:hover {
-    color: #f8b400;
+    color: #38bdf8;
+}
+
+.footer-copy {
+    margin: 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .footer-copy {
