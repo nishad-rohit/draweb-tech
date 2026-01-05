@@ -6,34 +6,89 @@ const Contact = () => {
     <div className="contact-container">
       {/* Contact Header */}
       <div className="contact-header">
-        <h1>Contact Us</h1>
-        <p>We’d love to hear from you. Reach out to us for any inquiries or collaborations.</p>
+        <h1>Tell us about your project</h1>
+        <p>Share your goals and we’ll respond with a tailored plan for your business.</p>
       </div>
 
       {/* Contact Details Section */}
       <div className="contact-details">
         <div className="contact-info">
-          <h3>Our Address</h3>
-          <p>Deira City Centre</p>
+          <h3>Office</h3>
+          <p>Business Village, Deira, Dubai</p>
         </div>
         <div className="contact-info">
           <h3>Email</h3>
-          <p>contact@webtech.com</p>
+          <p>hello@drawebtech.com</p>
         </div>
         <div className="contact-info">
           <h3>Phone</h3>
-          <p>+9715532823790</p>
+          <p>+971 55 328 23790</p>
+        </div>
+        <div className="contact-info">
+          <h3>Hours</h3>
+          <p>Sun - Thu: 9:00 AM - 6:00 PM</p>
         </div>
       </div>
 
       {/* Contact Form */}
       <div className="contact-form-container">
-        <h2>Send Us a Message</h2>
+        <div className="form-header">
+          <h2>Request a Consultation</h2>
+          <p>Tell us what you need and we’ll reply within one business day.</p>
+        </div>
         <form className="contact-form">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Your Message" rows="5" required></textarea>
-          <button type="submit">Submit</button>
+          <div className="contact-form-grid">
+            <div className="form-group">
+              <label htmlFor="fullName">Full Name</label>
+              <input id="fullName" type="text" placeholder="Enter your full name" required />
+            </div>
+            <div className="form-group">
+              <label htmlFor="company">Company</label>
+              <input id="company" type="text" placeholder="Company or brand name" required />
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Work Email</label>
+              <input id="email" type="email" placeholder="name@company.com" required />
+            </div>
+            <div className="form-group">
+              <label htmlFor="phone">Phone Number</label>
+              <input id="phone" type="tel" placeholder="+971 55 000 0000" required />
+            </div>
+            <div className="form-group">
+              <label htmlFor="service">Service Needed</label>
+              <select id="service" required>
+                <option value="">Select a service</option>
+                <option value="mobile-apps">Mobile App Development</option>
+                <option value="web-apps">Web Application Development</option>
+                <option value="websites">Website Design & Development</option>
+                <option value="digital-marketing">Digital Marketing</option>
+                <option value="network-security">Network Security</option>
+              </select>
+            </div>
+            <div className="form-group">
+              <label htmlFor="budget">Estimated Budget</label>
+              <select id="budget">
+                <option value="">Select a range</option>
+                <option value="below-20k">Below AED 20K</option>
+                <option value="20k-50k">AED 20K - 50K</option>
+                <option value="50k-100k">AED 50K - 100K</option>
+                <option value="100k-plus">AED 100K+</option>
+              </select>
+            </div>
+          </div>
+          <div className="form-group form-group-full">
+            <label htmlFor="message">Project Details</label>
+            <textarea
+              id="message"
+              placeholder="Tell us about your requirements, timeline, and goals."
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          <div className="form-actions">
+            <button type="submit">Request Consultation</button>
+            <span className="form-note">We respect your privacy and never share your data.</span>
+          </div>
         </form>
       </div>
 
