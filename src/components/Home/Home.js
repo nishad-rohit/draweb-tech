@@ -8,28 +8,28 @@ const Home = () => {
       {/* Hero Section */}
       <header className="hero-section">
         <div className="hero-content">
-          <span className="hero-pill">IT Solutions Partner</span>
-          <h1>Design, build, and secure digital products that scale</h1>
+          <span className="hero-pill">Managed IT Services & Cloud Solutions</span>
+          <h1>Reliable IT partner for growing businesses</h1>
           <p>
-            We deliver mobile apps, web applications, modern websites, digital marketing, and
-            network security with one expert team.
+            Draweb Tech delivers secure infrastructure, 24/7 monitoring, and custom software
+            that keeps your operations fast, compliant, and always online.
           </p>
           <div className="hero-actions">
-            <Link className="cta-button" to="/contact">Start a Project</Link>
-            <Link className="secondary-button" to="/services">Explore Services</Link>
+            <Link className="cta-button" to="/contact">Request a Consultation</Link>
+            <Link className="secondary-button" to="/services">View Services</Link>
           </div>
           <div className="hero-stats">
             <div>
-              <h3>150+</h3>
-              <p>Projects delivered</p>
-            </div>
-            <div>
-              <h3>12+</h3>
-              <p>Years in IT</p>
+              <h3>98%</h3>
+              <p>Client retention</p>
             </div>
             <div>
               <h3>24/7</h3>
-              <p>Support coverage</p>
+              <p>Monitoring</p>
+            </div>
+            <div>
+              <h3>150+</h3>
+              <p>Deployments</p>
             </div>
           </div>
         </div>
@@ -38,29 +38,21 @@ const Home = () => {
       {/* Services Preview */}
       <section className="services-preview">
         <div className="section-heading">
-          <h2>Solutions built for modern teams</h2>
-          <p>From strategy to delivery, we cover the full digital lifecycle.</p>
+          <h2>Core IT Services</h2>
+          <p>We design, build, and manage infrastructure that scales with your business.</p>
         </div>
         <div className="preview-grid">
           <article className="preview-card">
-            <h3>Mobile App Development</h3>
-            <p>iOS and Android apps engineered for performance, usability, and growth.</p>
+            <h3>Managed IT</h3>
+            <p>Proactive monitoring, patching, and help desk support to keep teams productive.</p>
           </article>
           <article className="preview-card">
-            <h3>Web Application Development</h3>
-            <p>Scalable platforms with clean architecture, APIs, and fast load times.</p>
+            <h3>Cloud & DevOps</h3>
+            <p>Cloud migrations, automated deployments, and cost optimization for modern stacks.</p>
           </article>
           <article className="preview-card">
-            <h3>Web Design & Websites</h3>
-            <p>Modern brand experiences that convert visitors into loyal customers.</p>
-          </article>
-          <article className="preview-card">
-            <h3>Digital Marketing</h3>
-            <p>SEO, paid campaigns, and content that drives measurable traffic.</p>
-          </article>
-          <article className="preview-card">
-            <h3>Network Security</h3>
-            <p>Threat prevention, monitoring, and compliance for business-critical systems.</p>
+            <h3>Cybersecurity</h3>
+            <p>Threat detection, backup, and compliance frameworks that protect critical data.</p>
           </article>
         </div>
       </section>
@@ -68,21 +60,21 @@ const Home = () => {
       {/* Why Choose Us */}
       <section className="why-section">
         <div className="section-heading">
-          <h2>Why teams partner with Draweb Tech</h2>
-          <p>We combine creativity, engineering, and security into one trusted partner.</p>
+          <h2>Why businesses choose Draweb Tech</h2>
+          <p>Strategic guidance, fast execution, and measurable outcomes.</p>
         </div>
         <div className="why-grid">
           <div className="why-card">
-            <h4>Product-first delivery</h4>
-            <p>We align every build with business goals, KPIs, and user outcomes.</p>
+            <h4>Dedicated vCIO support</h4>
+            <p>Align your IT roadmap with business goals, budgets, and compliance requirements.</p>
           </div>
           <div className="why-card">
-            <h4>Transparent timelines</h4>
-            <p>Weekly check-ins and clear milestones keep delivery predictable.</p>
+            <h4>Transparent SLAs</h4>
+            <p>Clearly defined response times and monthly reporting keep performance on track.</p>
           </div>
           <div className="why-card">
-            <h4>Security by design</h4>
-            <p>We build secure foundations with proactive monitoring and testing.</p>
+            <h4>Scalable delivery</h4>
+            <p>From startups to enterprise rollouts, we scale tools and talent with your needs.</p>
           </div>
         </div>
       </section>
@@ -90,9 +82,9 @@ const Home = () => {
       {/* CTA Section */}
       <section className="contact-section">
         <div className="contact-card">
-          <h2>Let’s build your next digital solution</h2>
-          <p>Tell us about your goals and get a customized proposal within 48 hours.</p>
-          <Link className="contact-button" to="/contact">Request a Proposal</Link>
+          <h2>Ready to modernize your IT?</h2>
+          <p>Book a strategy call and receive a tailored service proposal within 48 hours.</p>
+          <Link className="contact-button" to="/contact">Talk to an Expert</Link>
         </div>
       </section>
     </div>

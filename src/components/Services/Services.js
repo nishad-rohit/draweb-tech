@@ -4,65 +4,65 @@ import "./Services.css"; // Import CSS file
 const Services = () => {
   return (
     <div className="services-container">
-      <h2 className="services-heading">IT Services for Digital Growth</h2>
+      <h2 className="services-heading">IT Services Built for Growth</h2>
       <p className="services-subheading">
-        Choose a dedicated team for product development, digital marketing, and security that
-        keeps your business running fast and safe.
+        From infrastructure management to cybersecurity, we deliver the complete IT stack with
+        measurable uptime and proactive support.
       </p>
 
       <div className="services-grid">
         <div className="service-card">
-          <img src="https://source.unsplash.com/300x200/?mobile,app" alt="Mobile app development" />
-          <h3>Mobile App Development</h3>
-          <p>Native and cross-platform apps built for performance, UX, and user retention.</p>
+          <img src="https://source.unsplash.com/300x200/?it,monitoring" alt="Managed IT services" />
+          <h3>Managed IT Services</h3>
+          <p>24/7 monitoring, device management, patching, and on-demand support for your teams.</p>
           <ul>
-            <li>iOS & Android development</li>
-            <li>Product strategy & UX</li>
-            <li>App store launch support</li>
+            <li>Help desk & remote support</li>
+            <li>Device & asset management</li>
+            <li>Monthly performance reporting</li>
           </ul>
         </div>
 
         <div className="service-card">
-          <img src="https://source.unsplash.com/300x200/?web,application" alt="Web application development" />
-          <h3>Web Application Development</h3>
-          <p>Scalable web apps, admin portals, and customer platforms tailored to your goals.</p>
+          <img src="https://source.unsplash.com/300x200/?cloud,server" alt="Cloud services" />
+          <h3>Cloud & DevOps</h3>
+          <p>Migrate, optimize, and scale cloud environments with reliable automation.</p>
           <ul>
-            <li>Custom dashboards & portals</li>
-            <li>API & systems integration</li>
-            <li>Performance optimization</li>
+            <li>AWS, Azure, & hybrid cloud</li>
+            <li>CI/CD pipeline automation</li>
+            <li>Cost optimization & governance</li>
           </ul>
         </div>
 
         <div className="service-card">
-          <img src="https://source.unsplash.com/300x200/?website,design" alt="Website design and development" />
-          <h3>Website Design & Development</h3>
-          <p>High-converting marketing sites with clear messaging and fast load times.</p>
+          <img src="https://source.unsplash.com/300x200/?cybersecurity,data" alt="Cybersecurity" />
+          <h3>Cybersecurity</h3>
+          <p>Layered security strategy to protect data, devices, and customer trust.</p>
           <ul>
-            <li>Branding & visual design</li>
-            <li>SEO-ready architecture</li>
-            <li>CMS or custom builds</li>
-          </ul>
-        </div>
-
-        <div className="service-card">
-          <img src="https://source.unsplash.com/300x200/?digital,marketing" alt="Digital marketing" />
-          <h3>Digital Marketing</h3>
-          <p>Campaigns and growth strategies that build visibility and qualified demand.</p>
-          <ul>
-            <li>SEO & content strategy</li>
-            <li>Paid ads & retargeting</li>
-            <li>Analytics & reporting</li>
-          </ul>
-        </div>
-
-        <div className="service-card">
-          <img src="https://source.unsplash.com/300x200/?cybersecurity,network" alt="Network security" />
-          <h3>Network Security</h3>
-          <p>Protect your infrastructure with proactive monitoring and secure architecture.</p>
-          <ul>
-            <li>Firewall & endpoint security</li>
-            <li>Threat monitoring & response</li>
+            <li>Threat detection & response</li>
             <li>Backup & disaster recovery</li>
+            <li>Compliance readiness</li>
+          </ul>
+        </div>
+
+        <div className="service-card">
+          <img src="https://source.unsplash.com/300x200/?software,development" alt="Software engineering" />
+          <h3>Custom Software</h3>
+          <p>Purpose-built tools, portals, and integrations tailored to your business workflows.</p>
+          <ul>
+            <li>Product discovery & UX</li>
+            <li>API & system integrations</li>
+            <li>Ongoing maintenance</li>
+          </ul>
+        </div>
+
+        <div className="service-card">
+          <img src="https://source.unsplash.com/300x200/?network,datacenter" alt="Infrastructure services" />
+          <h3>Infrastructure & Networking</h3>
+          <p>Design and manage reliable on-prem and hybrid networks for stable operations.</p>
+          <ul>
+            <li>Network setup & optimization</li>
+            <li>Secure Wi-Fi & VPN</li>
+            <li>Server & storage management</li>
           </ul>
         </div>
       </div>

@@ -6,8 +6,8 @@ const Contact = () => {
     <div className="contact-container">
       {/* Contact Header */}
       <div className="contact-header">
-        <h1>Tell us about your project</h1>
-        <p>Share your goals and we’ll respond with a tailored plan for your business.</p>
+        <h1>Talk to Our IT Experts</h1>
+        <p>Share your requirements and we’ll respond with a tailored service plan.</p>
       </div>
 
       {/* Contact Details Section */}
