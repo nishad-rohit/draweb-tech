@@ -6,23 +6,27 @@ const Contact = () => {
     <div className="contact-container">
       {/* Contact Header */}
       <div className="contact-header">
-        <h1>Contact Us</h1>
-        <p>We’d love to hear from you. Reach out to us for any inquiries or collaborations.</p>
+        <h1>Talk to Our IT Experts</h1>
+        <p>Share your requirements and we’ll respond with a tailored service plan.</p>
       </div>
 
       {/* Contact Details Section */}
       <div className="contact-details">
         <div className="contact-info">
-          <h3>Our Address</h3>
-          <p>Deira City Centre</p>
+          <h3>Office</h3>
+          <p>Business Village, Deira, Dubai</p>
         </div>
         <div className="contact-info">
           <h3>Email</h3>
-          <p>contact@webtech.com</p>
+          <p>hello@drawebtech.com</p>
         </div>
         <div className="contact-info">
           <h3>Phone</h3>
-          <p>+9715532823790</p>
+          <p>+971 55 328 23790</p>
+        </div>
+        <div className="contact-info">
+          <h3>Hours</h3>
+          <p>Sun - Thu: 9:00 AM - 6:00 PM</p>
         </div>
       </div>
 
@@ -30,10 +34,24 @@ const Contact = () => {
       <div className="contact-form-container">
         <h2>Send Us a Message</h2>
         <form className="contact-form">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Your Message" rows="5" required></textarea>
-          <button type="submit">Submit</button>
+          <div className="form-row">
+            <input type="text" placeholder="Full Name" required />
+            <input type="text" placeholder="Company" required />
+          </div>
+          <div className="form-row">
+            <input type="email" placeholder="Work Email" required />
+            <input type="tel" placeholder="Phone Number" required />
+          </div>
+          <select required>
+            <option value="">Select a service</option>
+            <option value="managed-it">Managed IT Services</option>
+            <option value="cloud">Cloud & DevOps</option>
+            <option value="cybersecurity">Cybersecurity</option>
+            <option value="software">Custom Software</option>
+            <option value="infrastructure">Infrastructure & Networking</option>
+          </select>
+          <textarea placeholder="Tell us about your requirements" rows="5" required></textarea>
+          <button type="submit">Request Consultation</button>
         </form>
       </div>
 

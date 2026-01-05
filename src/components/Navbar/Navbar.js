@@ -20,7 +20,7 @@ const Navbar = () => {
       </ul>
 
       {/* Sign Up Button - Positioned Right */}
-      <button className="nav-button">Sign Up</button>
+      <Link className="nav-button" to="/contact">Get a Quote</Link>
     </nav>
   );
 };

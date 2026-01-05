@@ -4,45 +4,66 @@ import "./Services.css"; // Import CSS file
 const Services = () => {
   return (
     <div className="services-container">
-      <h2 className="services-heading">Our Services</h2>
+      <h2 className="services-heading">IT Services Built for Growth</h2>
       <p className="services-subheading">
-        We provide top-tier solutions for businesses in Design, Development, Deployment, Marketing, and Service Support.
+        From infrastructure management to cybersecurity, we deliver the complete IT stack with
+        measurable uptime and proactive support.
       </p>
 
       <div className="services-grid">
-        {/* Design */}
         <div className="service-card">
-          <img src="https://source.unsplash.com/300x200/?design,creative" alt="Design" />
-          <h3>Design</h3>
-          <p>We craft visually stunning and user-friendly UI/UX designs to enhance customer experiences.</p>
+          <img src="https://source.unsplash.com/300x200/?it,monitoring" alt="Managed IT services" />
+          <h3>Managed IT Services</h3>
+          <p>24/7 monitoring, device management, patching, and on-demand support for your teams.</p>
+          <ul>
+            <li>Help desk & remote support</li>
+            <li>Device & asset management</li>
+            <li>Monthly performance reporting</li>
+          </ul>
         </div>
 
-        {/* Development */}
         <div className="service-card">
-          <img src="https://source.unsplash.com/300x200/?technology,programming" alt="Development" />
-          <h3>Development</h3>
-          <p>Our expert developers create high-performance web and mobile applications tailored to your needs.</p>
+          <img src="https://source.unsplash.com/300x200/?cloud,server" alt="Cloud services" />
+          <h3>Cloud & DevOps</h3>
+          <p>Migrate, optimize, and scale cloud environments with reliable automation.</p>
+          <ul>
+            <li>AWS, Azure, & hybrid cloud</li>
+            <li>CI/CD pipeline automation</li>
+            <li>Cost optimization & governance</li>
+          </ul>
         </div>
 
-        {/* Deployment */}
         <div className="service-card">
-          <img src="https://source.unsplash.com/300x200/?server,cloud" alt="Deployment" />
-          <h3>Deployment</h3>
-          <p>We handle seamless integration, cloud deployment, and server management for your business.</p>
+          <img src="https://source.unsplash.com/300x200/?cybersecurity,data" alt="Cybersecurity" />
+          <h3>Cybersecurity</h3>
+          <p>Layered security strategy to protect data, devices, and customer trust.</p>
+          <ul>
+            <li>Threat detection & response</li>
+            <li>Backup & disaster recovery</li>
+            <li>Compliance readiness</li>
+          </ul>
         </div>
 
-        {/* Marketing */}
         <div className="service-card">
-          <img src="https://source.unsplash.com/300x200/?marketing,advertising" alt="Marketing" />
-          <h3>Marketing</h3>
-          <p>Our digital marketing strategies help businesses grow, drive engagement, and increase conversions.</p>
+          <img src="https://source.unsplash.com/300x200/?software,development" alt="Software engineering" />
+          <h3>Custom Software</h3>
+          <p>Purpose-built tools, portals, and integrations tailored to your business workflows.</p>
+          <ul>
+            <li>Product discovery & UX</li>
+            <li>API & system integrations</li>
+            <li>Ongoing maintenance</li>
+          </ul>
         </div>
 
-        {/* Service Support */}
         <div className="service-card">
-          <img src="https://source.unsplash.com/300x200/?customer,support" alt="Service Support" />
-          <h3>Service Support</h3>
-          <p>We provide 24/7 technical support and maintenance to keep your business running smoothly.</p>
+          <img src="https://source.unsplash.com/300x200/?network,datacenter" alt="Infrastructure services" />
+          <h3>Infrastructure & Networking</h3>
+          <p>Design and manage reliable on-prem and hybrid networks for stable operations.</p>
+          <ul>
+            <li>Network setup & optimization</li>
+            <li>Secure Wi-Fi & VPN</li>
+            <li>Server & storage management</li>
+          </ul>
         </div>
       </div>
     </div>
