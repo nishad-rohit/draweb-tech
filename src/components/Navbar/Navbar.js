@@ -19,8 +19,8 @@ const Navbar = () => {
         <li><Link to="/contact">Contact</Link></li>
       </ul>
 
-      {/* CTA Button - Positioned Right */}
-      <Link className="nav-button" to="/contact">Book a Call</Link>
+      {/* Sign Up Button - Positioned Right */}
+      <Link className="nav-button" to="/contact">Get a Quote</Link>
     </nav>
   );
 };

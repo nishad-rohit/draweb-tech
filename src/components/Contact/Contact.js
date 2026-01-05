@@ -6,8 +6,8 @@ const Contact = () => {
     <div className="contact-container">
       {/* Contact Header */}
       <div className="contact-header">
-        <h1>Tell us about your project</h1>
-        <p>Share your goals and we’ll respond with a tailored plan for your business.</p>
+        <h1>Talk to Our IT Experts</h1>
+        <p>Share your requirements and we’ll respond with a tailored service plan.</p>
       </div>
 
       {/* Contact Details Section */}
@@ -31,64 +31,27 @@ const Contact = () => {
       </div>
 
       {/* Contact Form */}
-      <div className="contact-form-container">
-        <div className="form-header">
-          <h2>Request a Consultation</h2>
-          <p>Tell us what you need and we’ll reply within one business day.</p>
-        </div>
+        <div className="contact-form-container">
+        <h2>Request a Consultation</h2>
         <form className="contact-form">
-          <div className="contact-form-grid">
-            <div className="form-group">
-              <label htmlFor="fullName">Full Name</label>
-              <input id="fullName" type="text" placeholder="Enter your full name" required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="company">Company</label>
-              <input id="company" type="text" placeholder="Company or brand name" required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="email">Work Email</label>
-              <input id="email" type="email" placeholder="name@company.com" required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="phone">Phone Number</label>
-              <input id="phone" type="tel" placeholder="+971 55 000 0000" required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="service">Service Needed</label>
-              <select id="service" required>
-                <option value="">Select a service</option>
-                <option value="mobile-apps">Mobile App Development</option>
-                <option value="web-apps">Web Application Development</option>
-                <option value="websites">Website Design & Development</option>
-                <option value="digital-marketing">Digital Marketing</option>
-                <option value="network-security">Network Security</option>
-              </select>
-            </div>
-            <div className="form-group">
-              <label htmlFor="budget">Estimated Budget</label>
-              <select id="budget">
-                <option value="">Select a range</option>
-                <option value="below-20k">Below AED 20K</option>
-                <option value="20k-50k">AED 20K - 50K</option>
-                <option value="50k-100k">AED 50K - 100K</option>
-                <option value="100k-plus">AED 100K+</option>
-              </select>
-            </div>
+          <div className="form-row">
+            <input type="text" placeholder="Full Name" required />
+            <input type="text" placeholder="Company" required />
           </div>
-          <div className="form-group form-group-full">
-            <label htmlFor="message">Project Details</label>
-            <textarea
-              id="message"
-              placeholder="Tell us about your requirements, timeline, and goals."
-              rows="5"
-              required
-            ></textarea>
+          <div className="form-row">
+            <input type="email" placeholder="Work Email" required />
+            <input type="tel" placeholder="Phone Number" required />
           </div>
-          <div className="form-actions">
-            <button type="submit">Request Consultation</button>
-            <span className="form-note">We respect your privacy and never share your data.</span>
-          </div>
+          <select required>
+            <option value="">Select a service</option>
+            <option value="managed-it">Managed IT Services</option>
+            <option value="cloud">Cloud & DevOps</option>
+            <option value="cybersecurity">Cybersecurity</option>
+            <option value="software">Custom Software</option>
+            <option value="infrastructure">Infrastructure & Networking</option>
+          </select>
+          <textarea placeholder="Tell us about your requirements" rows="5" required></textarea>
+          <button type="submit">Request Consultation</button>
         </form>
       </div>
 

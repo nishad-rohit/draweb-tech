@@ -6,21 +6,22 @@ const About = () => {
     <div className="about-container">
       <div className="about-header">
         <h1>About Draweb Tech</h1>
-        <p>A service-based IT provider helping brands go digital, fast.</p>
+        <p>Service-driven IT expertise for modern businesses.</p>
       </div>
 
       <div className="about-content">
         <div className="about-text">
           <h2>Who We Are</h2>
           <p>
-            Draweb Tech is a multidisciplinary IT studio delivering mobile apps, web applications,
-            modern websites, digital marketing, and network security. We combine strategy, design,
-            and engineering to launch solutions that keep your business competitive.
+            Draweb Tech is a service-based IT provider delivering managed services, cloud
+            engineering, and cybersecurity solutions for companies across the GCC. We combine
+            strategic planning with hands-on delivery to help teams scale with confidence.
           </p>
           <h2>Our Mission</h2>
           <p>
-            Our mission is to turn complex IT needs into reliable, user-friendly products backed by
-            measurable performance and security-first delivery.
+            We exist to keep your technology reliable, secure, and future-ready. Our mission is
+            to be the long-term IT partner that businesses rely on for measurable results and
+            always-on support.
           </p>
           <div className="about-metrics">
             <div>
@@ -28,18 +29,18 @@ const About = () => {
               <p>Industry experience</p>
             </div>
             <div>
-              <h3>100+</h3>
-              <p>Apps & sites launched</p>
+              <h3>95%</h3>
+              <p>Tickets resolved in 24h</p>
             </div>
             <div>
-              <h3>24/7</h3>
-              <p>Support & monitoring</p>
+              <h3>ISO-ready</h3>
+              <p>Compliance support</p>
             </div>
           </div>
         </div>
 
         <div className="about-image">
-          <img src="https://source.unsplash.com/600x420/?technology,team" alt="IT team collaboration" />
+          <img src="https://source.unsplash.com/600x420/?it,teamwork" alt="IT team collaboration" />
         </div>
       </div>
     </div>

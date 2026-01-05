@@ -7,8 +7,8 @@
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(120deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.4)),
-        url("https://source.unsplash.com/1600x900/?technology,innovation") no-repeat center center/cover;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.4)),
+        url("https://source.unsplash.com/1600x900/?data,cloud") no-repeat center center/cover;
     color: white;
     min-height: 75vh;
     display: flex;
@@ -24,24 +24,10 @@
     padding: 32px;
     border-radius: 18px;
     box-shadow: 0 12px 24px rgba(15, 23, 42, 0.3);
-    transform: perspective(1200px) rotateX(2deg);
-    transform-style: preserve-3d;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-content::after {
-    content: "";
-    position: absolute;
-    inset: -40% 0 auto;
-    height: 60%;
-    background: radial-gradient(circle, rgba(56, 189, 248, 0.2), transparent 70%);
-    transform: translateZ(30px);
-    pointer-events: none;
 }
 
 .hero-content h1 {
-    font-size: 42px;
+    font-size: 40px;
     margin-bottom: 16px;
 }
 
@@ -53,8 +39,8 @@
 
 .hero-pill {
     display: inline-block;
-    background: rgba(56, 189, 248, 0.2);
-    color: #38bdf8;
+    background: rgba(248, 180, 0, 0.15);
+    color: #f8b400;
     font-weight: 600;
     padding: 6px 16px;
     border-radius: 999px;
@@ -74,8 +60,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: #38bdf8;
-    color: #0f172a;
+    background-color: #f8b400;
+    color: black;
     border: none;
     padding: 12px 24px;
     font-size: 16px;
@@ -97,8 +83,8 @@
 }
 
 .secondary-button:hover {
-    border-color: #38bdf8;
-    color: #38bdf8;
+    border-color: #f8b400;
+    color: #f8b400;
 }
 
 .hero-stats {
@@ -137,13 +123,13 @@
 
 /* Services Preview */
 .services-preview {
-    padding: 80px 20px;
-    background-color: #ffffff;
+    padding: 70px 20px;
+    background-color: white;
 }
 
 .preview-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 24px;
     max-width: 1100px;
     margin: 0 auto;
@@ -158,24 +144,13 @@
 }
 
 .preview-card h3 {
-    margin: 0 0 8px;
-    color: #0f172a;
-}
-
-.preview-card p {
-    margin: 0;
-    color: #475569;
-    line-height: 1.6;
-}
-
-.preview-card h3 {
     margin-top: 0;
     color: #0f172a;
 }
 
 /* Why section */
 .why-section {
-    padding: 80px 20px;
+    padding: 70px 20px;
     background-color: #e2e8f0;
 }
 
@@ -197,7 +172,7 @@
 
 /* Contact Section */
 .contact-section {
-    padding: 90px 20px;
+    padding: 80px 20px;
     background: #0f172a;
     color: white;
 }
@@ -219,8 +194,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: #38bdf8;
-    color: #0f172a;
+    background-color: #f8b400;
+    color: black;
     border: none;
     padding: 12px 24px;
     font-size: 16px;
@@ -233,6 +208,17 @@
 
 .contact-button:hover {
     background-color: #7dd3fc;
+}
+
+@media (max-width: 700px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 16px;
+    }
 }
 
 @media (max-width: 700px) {
