@@ -3,8 +3,8 @@
     display: flex;
     justify-content: center; /* Centering the nav links */
     align-items: center;
-    padding: 15px 30px;
-    background-color: #1a1a2e;
+    padding: 16px 32px;
+    background-color: #0f172a;
     color: white;
     position: fixed;
     width: 100%;
@@ -50,24 +50,41 @@
 }
 
 .nav-links a:hover {
-    color: #f8b400;
+    color: #38bdf8;
 }
 
 /* Navbar button */
 .nav-button {
     position: absolute;
     right: 30px; /* Keeps button on the right */
-    background-color: #f8b400;
+    background-color: #38bdf8;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
-    color: black;
+    color: #0f172a;
     cursor: pointer;
     border-radius: 5px;
     transition: 0.3s;
+    text-decoration: none;
 }
 
 .nav-button:hover {
-    background-color: #ffcc00;
+    background-color: #7dd3fc;
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px 20px 20px;
+    }
+
+    .logo-container {
+        position: static;
+    }
+
+    .nav-button {
+        position: static;
+    }
 }
