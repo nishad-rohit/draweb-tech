@@ -1,73 +1,264 @@
-/* Services Section */
-.services-container {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #f8fafc;
+/* =========================================
+   SERVICES SECTION
+   ========================================= */
+.services {
+  position: relative;
+  background: #070d1c;
+  padding: 100px 0;
+  overflow: hidden;
 }
 
-/* Heading Styles */
-.services-heading {
-    font-size: 36px;
-    color: #0f172a;
-    margin-bottom: 10px;
+.services__bg-accent {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.055) 0%, transparent 65%);
+  bottom: -300px;
+  right: -200px;
+  pointer-events: none;
 }
 
-.services-subheading {
-    font-size: 18px;
-    color: #475569;
-    margin-bottom: 30px;
+.services__inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 36px;
 }
 
-/* Service Grid */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
-    max-width: 1200px;
-    margin: 0 auto;
+/* ── Header ── */
+.services__header {
+  text-align: center;
+  margin-bottom: 60px;
 }
 
-/* Service Cards */
+.services__header .section-sub {
+  margin: 0 auto;
+  max-width: 680px;
+}
+
+/* ── Service Cards Grid ── */
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ── Glassmorphism Service Card ── */
 .service-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: left;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(56, 189, 248, 0.1);
+  border-radius: 18px;
+  padding: 32px 28px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
+  border-color: rgba(56, 189, 248, 0.35);
+  background: rgba(56, 189, 248, 0.04);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(56, 189, 248, 0.12);
 }
 
-/* Service Images */
-.service-card img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
+.service-card__icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(56, 189, 248, 0.07);
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-/* Service Titles */
-.service-card h3 {
-    font-size: 24px;
-    color: #0f172a;
-    margin-bottom: 10px;
+.service-card__title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0;
+  line-height: 1.3;
 }
 
-/* Service Description */
-.service-card p {
-    font-size: 16px;
-    color: #334155;
-    line-height: 1.5;
+.service-card__desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #64748b;
+  margin: 0;
+  flex: 1;
 }
 
-.service-card ul {
-    padding-left: 18px;
-    margin: 12px 0 0;
-    color: #475569;
+.service-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
 }
 
-.service-card li {
-    margin-bottom: 6px;
+.service-card__tag {
+  font-size: 11px;
+  font-weight: 600;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  padding: 3px 10px;
+  border-radius: 100px;
+  letter-spacing: 0.4px;
+}
+
+/* =========================================
+   INDUSTRIES SECTION
+   ========================================= */
+.industries {
+  background: #0a1020;
+  padding: 100px 0;
+}
+
+.industries__inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 36px;
+}
+
+.industries__header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.industries__header .section-sub {
+  margin: 0 auto;
+  max-width: 620px;
+}
+
+/* ── Industry Cards Grid ── */
+.industries__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.industry-card {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(56, 189, 248, 0.09);
+  border-radius: 16px;
+  padding: 28px 20px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+  cursor: default;
+}
+
+.industry-card:hover {
+  border-color: rgba(56, 189, 248, 0.3);
+  background: rgba(56, 189, 248, 0.04);
+  transform: translateY(-4px);
+}
+
+.industry-card__icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(56, 189, 248, 0.07);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.industry-card__name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin: 0;
+}
+
+.industry-card__desc {
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* =========================================
+   SHARED HELPERS (referenced from about too)
+   ========================================= */
+.section-tag {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  color: #38bdf8;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 100px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.section-heading {
+  font-size: clamp(28px, 3.2vw, 42px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #f1f5f9;
+  margin: 0 0 18px;
+  line-height: 1.15;
+}
+
+.section-sub {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.text-accent {
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 1200px) {
+  .industries__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 960px) {
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .services {
+    padding: 72px 0;
+  }
+  .industries {
+    padding: 72px 0;
+  }
+
+  .services__inner,
+  .industries__inner {
+    padding: 0 20px;
+  }
+
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .industries__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

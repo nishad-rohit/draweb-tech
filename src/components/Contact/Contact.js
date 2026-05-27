@@ -1,74 +1,182 @@
-import React from "react";
-import "./Contact.css"; // Import CSS file
+import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import './Contact.css';
+
+const CONTACT_INFO = [
+  {
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M10 1C6.7 1 4 3.7 4 7c0 4.5 6 12 6 12s6-7.5 6-12c0-3.3-2.7-6-6-6Z" stroke="#38bdf8" strokeWidth="1.4" fill="rgba(56,189,248,0.1)"/>
+        <circle cx="10" cy="7" r="2" stroke="#38bdf8" strokeWidth="1.2" fill="rgba(56,189,248,0.2)"/>
+      </svg>
+    ),
+    label: 'Office',
+    value: 'Business Village, Deira, Dubai, UAE',
+  },
+  {
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <rect x="2" y="4" width="16" height="12" rx="2" stroke="#38bdf8" strokeWidth="1.4" fill="rgba(56,189,248,0.1)"/>
+        <path d="M2 7l8 5 8-5" stroke="#38bdf8" strokeWidth="1.2"/>
+      </svg>
+    ),
+    label: 'Email',
+    value: 'hello@technovasolutions.com',
+  },
+  {
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M4 3h3l1.5 4-2 1.5a11 11 0 0 0 5 5l1.5-2 4 1.5V16c0 .6-.4 1-1 1C6.7 17 3 10 3 4c0-.6.4-1 1-1Z" stroke="#38bdf8" strokeWidth="1.4" fill="rgba(56,189,248,0.1)"/>
+      </svg>
+    ),
+    label: 'Phone',
+    value: '+971 4 123 4567',
+  },
+  {
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <circle cx="10" cy="10" r="8" stroke="#38bdf8" strokeWidth="1.4" fill="rgba(56,189,248,0.1)"/>
+        <path d="M10 5v5l3.5 3.5" stroke="#38bdf8" strokeWidth="1.4" strokeLinecap="round"/>
+      </svg>
+    ),
+    label: 'Business Hours',
+    value: 'Sun – Thu, 9:00 AM – 6:00 PM',
+  },
+];
 
 const Contact = () => {
+  const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const [status, setStatus] = useState(null); // 'sending' | 'success' | 'error'
+
+  const handleChange = (e) =>
+    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setStatus('sending');
+
+    const templateParams = {
+      from_name: form.name,
+      from_email: form.email,
+      message: form.message,
+      to_email: 'nishad.rohit@outlook.com',
+    };
+
+    emailjs
+      .send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(() => {
+        setStatus('success');
+        setForm({ name: '', email: '', message: '' });
+        setTimeout(() => setStatus(null), 5000);
+      })
+      .catch(() => {
+        setStatus('error');
+        setTimeout(() => setStatus(null), 5000);
+      });
+  };
+
   return (
-    <div className="contact-container">
-      {/* Contact Header */}
-      <div className="contact-header">
-        <h1>Talk to Our IT Experts</h1>
-        <p>Share your requirements and we’ll respond with a tailored service plan.</p>
-      </div>
+    <section id="contact" className="contact">
+      <div className="contact__bg-accent" aria-hidden="true" />
 
-      {/* Contact Details Section */}
-      <div className="contact-details">
-        <div className="contact-info">
-          <h3>Office</h3>
-          <p>Business Village, Deira, Dubai</p>
-        </div>
-        <div className="contact-info">
-          <h3>Email</h3>
-          <p>hello@drawebtech.com</p>
-        </div>
-        <div className="contact-info">
-          <h3>Phone</h3>
-          <p>+971 55 328 23790</p>
-        </div>
-        <div className="contact-info">
-          <h3>Hours</h3>
-          <p>Sun - Thu: 9:00 AM - 6:00 PM</p>
-        </div>
-      </div>
-
-      {/* Contact Form */}
-        <div className="contact-form-container">
-        <h2>Request a Consultation</h2>
-        <form className="contact-form">
-          <div className="form-row">
-            <input type="text" placeholder="Full Name" required />
-            <input type="text" placeholder="Company" required />
+      <div className="contact__inner">
+        {/* Top CTA banner */}
+        <div className="contact__cta-banner">
+          <div className="contact__cta-text">
+            <span className="section-tag">Get In Touch</span>
+            <h2 className="section-heading">
+              Ready to Build Your Next{' '}
+              <span className="text-accent">Digital Product?</span>
+            </h2>
+            <p className="section-sub">
+              Tell us about your project. Our team will review your requirements and get back to
+              you within 24 hours with a tailored solution proposal.
+            </p>
           </div>
-          <div className="form-row">
-            <input type="email" placeholder="Work Email" required />
-            <input type="tel" placeholder="Phone Number" required />
+          <div className="contact__cta-info">
+            {CONTACT_INFO.map(({ icon, label, value }) => (
+              <div className="contact__info-item" key={label}>
+                <div className="contact__info-icon">{icon}</div>
+                <div>
+                  <p className="contact__info-label">{label}</p>
+                  <p className="contact__info-value">{value}</p>
+                </div>
+              </div>
+            ))}
           </div>
-          <select required>
-            <option value="">Select a service</option>
-            <option value="managed-it">Managed IT Services</option>
-            <option value="cloud">Cloud & DevOps</option>
-            <option value="cybersecurity">Cybersecurity</option>
-            <option value="software">Custom Software</option>
-            <option value="infrastructure">Infrastructure & Networking</option>
-          </select>
-          <textarea placeholder="Tell us about your requirements" rows="5" required></textarea>
-          <button type="submit">Request Consultation</button>
-        </form>
-      </div>
+        </div>
 
-      {/* Google Maps Embed */}
-      <div className="contact-map">
-        <h2>Find Us</h2>
-        <iframe
-          title="Company Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.1234567890123!2d55.1234567890123!3d25.1234567890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5c1234567890%3A0x1234567890abcdef!2sBusiness%20Village%2C%20Deira%2C%20Dubai!5e0!3m2!1sen!2sae!4v1615867033717!5m2!1sen!2sae"
-          width="100%"
-          height="300"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-        ></iframe>
+        {/* Form */}
+        <div className="contact__form-wrap">
+          <h3 className="contact__form-title">Send Us a Message</h3>
+
+          {status === 'success' && (
+            <div className="contact__alert contact__alert--success">
+              ✓ Message sent! We'll reply to {form.email || 'your email'} within 24 hours.
+            </div>
+          )}
+          {status === 'error' && (
+            <div className="contact__alert contact__alert--error">
+              ✗ Something went wrong. Please try again or email us directly.
+            </div>
+          )}
+
+          <form className="contact__form" onSubmit={handleSubmit} noValidate>
+            <div className="contact__form-row">
+              <div className="contact__field">
+                <label htmlFor="name">Full Name</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="John Smith"
+                  value={form.name}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className="contact__field">
+                <label htmlFor="email">Email Address</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="john@company.com"
+                  value={form.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="contact__field">
+              <label htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Tell us about your project, goals, and timeline..."
+                value={form.message}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <button type="submit" className="contact__submit" disabled={status === 'sending'}>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" style={{ flexShrink: 0 }}>
+                <path d="M2 9l14-7-7 14V9H2Z" fill="currentColor"/>
+              </svg>
+              {status === 'sending' ? 'Sending…' : 'Send Message'}
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

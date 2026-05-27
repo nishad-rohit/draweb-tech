@@ -1,114 +1,204 @@
-/* Navbar container */
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: background 0.35s ease, backdrop-filter 0.35s ease, box-shadow 0.35s ease;
+}
+
+.navbar--scrolled {
+  background: rgba(7, 13, 28, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.1);
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.4);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 36px;
+  height: 76px;
+}
+
+/* ── Brand ── */
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__brand-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #f1f5f9;
+  letter-spacing: -0.3px;
+  white-space: nowrap;
+}
+
+.navbar__brand-accent {
+  color: #38bdf8;
+}
+
+/* ── Nav Links ── */
+.navbar__links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2px;
+  align-items: center;
+}
+
+.navbar__link {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 14.5px;
+  font-weight: 500;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: color 0.2s ease, background 0.2s ease;
+  white-space: nowrap;
+}
+
+.navbar__link:hover {
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.08);
+}
+
+/* ── CTA Button ── */
+.navbar__cta {
+  background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+  color: #070d1c;
+  border: none;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+  letter-spacing: 0.2px;
+}
+
+.navbar__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(56, 189, 248, 0.45);
+}
+
+/* Hide mobile CTA inside links by default */
+.navbar__links-cta {
+  display: none;
+}
+
+/* ── Hamburger ── */
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  flex-shrink: 0;
+}
+
+.navbar__hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #94a3b8;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease;
+}
+
+.navbar__hamburger--open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  background: #38bdf8;
+}
+.navbar__hamburger--open span:nth-child(2) {
+  opacity: 0;
+}
+.navbar__hamburger--open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  background: #38bdf8;
+}
+
+/* ── Mobile ── */
+@media (max-width: 960px) {
+  .navbar__hamburger {
     display: flex;
-    justify-content: center; /* Centering the nav links */
-    align-items: center;
-    padding: 16px 32px;
-    background-color: #0f172a;
-    color: white;
-    position: fixed;
+  }
+
+  .navbar__cta--desktop {
+    display: none;
+  }
+
+  .navbar__links-cta {
+    display: list-item;
+    margin-top: 8px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(56, 189, 248, 0.1);
+  }
+
+  .navbar__links-cta .navbar__cta {
     width: 100%;
-    top: 0;
+    padding: 12px 22px;
+    font-size: 15px;
+  }
+
+  .navbar__links {
+    position: fixed;
+    top: 76px;
     left: 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    right: 0;
+    background: rgba(7, 13, 28, 0.97);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px 20px 20px;
+    gap: 2px;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.1);
+    transform: translateY(-110%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.35s ease;
+  }
+
+  .navbar__links--open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .navbar__link {
+    padding: 12px 16px;
+    font-size: 15px;
+    text-align: left;
+    border-radius: 8px;
+  }
 }
 
-/* Logo container */
-.logo-container {
-    position: absolute;
-    left: 30px; /* Keeps logo on the left */
-}
-
-/* Logo Image */
-.logo {
-    height: 50px;
-    width: auto;
-    cursor: pointer;
-    filter: drop-shadow(0 6px 12px rgba(56, 189, 248, 0.35));
-    transform: perspective(600px) rotateX(6deg);
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.logo:hover {
-    transform: perspective(600px) rotateX(0deg) scale(1.02);
-    filter: drop-shadow(0 10px 18px rgba(56, 189, 248, 0.5));
-}
-
-/* Navbar links */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px; /* Adjust spacing between links */
-    padding: 0;
-    margin: 0;
-}
-
-/* Navbar items */
-.nav-links li {
-    display: inline-block;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: #38bdf8;
-}
-
-/* Navbar button */
-.nav-button {
-    position: absolute;
-    right: 30px; /* Keeps button on the right */
-    background-color: #38bdf8;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #0f172a;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
-    text-decoration: none;
-}
-
-.nav-button:hover {
-    background-color: #7dd3fc;
-}
-
-@media (max-width: 900px) {
-    .navbar {
-        flex-direction: column;
-        gap: 12px;
-        padding: 16px 20px 20px;
-    }
-
-    .logo-container {
-        position: static;
-    }
-
-    .nav-button {
-        position: static;
-    }
-}
-
-@media (max-width: 900px) {
-    .navbar {
-        flex-direction: column;
-        gap: 12px;
-        padding: 16px 20px 20px;
-    }
-
-    .logo-container {
-        position: static;
-    }
-
-    .nav-button {
-        position: static;
-    }
+@media (max-width: 480px) {
+  .navbar__inner {
+    padding: 0 20px;
+  }
 }

@@ -1,20 +1,15 @@
-/* Ensure full height layout */
 html, body, #root {
-  height: 100%;
   margin: 0;
   padding: 0;
 }
 
-/* App container fills full height */
 .app-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background: #070d1c;
 }
 
-/* Main content expands to push footer down */
-.main-content {
-  flex: 1; /* This pushes the footer to the bottom */
-  text-align: center;
-  padding: 110px 20px 60px;
+main {
+  flex: 1;
 }
